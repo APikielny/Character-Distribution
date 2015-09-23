@@ -46,6 +46,11 @@ for letter in alphabet:
     dictionary[letter]=0
 for letter in lowercase:
     dictionary[letter]+=1
+print(sorted(dictionary))
+
+from operator import itemgetter
+sortednary=sorted(dictionary.items(), key=itemgetter(1))
+print(sortednary)
 
 #print (dictionary)
 #print("The distribution of characters in '" + string + "'")
