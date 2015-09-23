@@ -1,7 +1,8 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Adam Pikielny
+Credit:
+http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in-python
 
 Assignment:
 
@@ -36,3 +37,16 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+string=input("Please enter a string of text (the bigger the better): ")
+lowercase=string.lower()
+dictionary={}
+for letter in lowercase:
+    dictionary[letter]=0
+for letter in lowercase:
+    dictionary[letter]+=1
+#print (dictionary)
+alphabet=["a","b","","","","","","","","","","","","","","","","","","","","","","","","",]
+for letter in alphabet:
+    print(letter*dictionary[letter])
+
+#print("The distribution of characters in '" + string + "'")
