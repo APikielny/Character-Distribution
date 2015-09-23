@@ -3,6 +3,7 @@ distribution.py
 Author: Adam Pikielny
 Credit:
 http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in-python
+https://docs.python.org/2/tutorial/datastructures.html
 
 Assignment:
 
@@ -40,13 +41,12 @@ Notice about this example:
 string=input("Please enter a string of text (the bigger the better): ")
 lowercase=string.lower()
 dictionary={}
-for letter in lowercase:
+for letter in alphabet:
     dictionary[letter]=0
 for letter in lowercase:
     dictionary[letter]+=1
 #print (dictionary)
-alphabet=["a","b","","","","","","","","","","","","","","","","","","","","","","","","",]
+print("The distribution of characters in '" + string + "'")
+alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",]
 for letter in alphabet:
     print(letter*dictionary[letter])
-
-#print("The distribution of characters in '" + string + "'")
