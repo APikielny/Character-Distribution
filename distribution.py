@@ -39,6 +39,7 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 string=input("Please enter a string of text (the bigger the better): ")
+print("\n")
 lowercase=string.lower()
 dictionary={}
 for letter in alphabet:
