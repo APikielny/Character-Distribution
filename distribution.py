@@ -52,6 +52,10 @@ for letter in alphabet:
 print(mylist)
 print(alphabet)
 
+
+print(zip(alphabet,mylist))
+
+
 #print(sorted(dictionary))
 
 #from operator import itemgetter
