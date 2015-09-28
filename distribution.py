@@ -41,20 +41,25 @@ Notice about this example:
 string=input("Please enter a string of text (the bigger the better): ")
 print("\n")
 lowercase=string.lower()
-dictionary={}
+#dictionary={}
+mylist=[]
+#for letter in alphabet:
+    #list.append(zip(0,[letter]))
+alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",]
 for letter in alphabet:
-    dictionary[letter]=0
-for letter in lowercase:
-    dictionary[letter]+=1
-print(sorted(dictionary))
+    mylist.append(lowercase.count(letter))
 
-from operator import itemgetter
-sortednary=sorted(dictionary.items(), key=itemgetter(1))
-print(sortednary)
+print(mylist)
+print(alphabet)
+
+#print(sorted(dictionary))
+
+#from operator import itemgetter
+#sortednary=sorted(dictionary.items(), key=itemgetter(1))
+#print(sortednary)
 
 #print (dictionary)
 #print("The distribution of characters in '" + string + "'")
-alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",]
-for letter in alphabet:
-    if dictionary[letter]!=0:
-        print(letter*dictionary[letter])
+#for letter in alphabet:
+    #if dictionary[letter]!=0:
+        #print(letter*dictionary[letter])
