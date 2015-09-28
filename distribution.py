@@ -49,11 +49,14 @@ alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r
 for letter in alphabet:
     mylist.append(lowercase.count(letter))
 
-print(mylist)
-print(alphabet)
 
 
-print(zip(alphabet,mylist))
+zipped=list((zip(alphabet,mylist)))
+
+print(list(zipped))
+
+zipped.sort(reverse=True)
+print(zipped)
 
 
 #print(sorted(dictionary))
