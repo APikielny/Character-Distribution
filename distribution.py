@@ -51,7 +51,7 @@ for letter in alphabet:
 
 
 
-zipped=list((zip(alphabet,mylist)))
+zipped=list((zip(mylist,alphabet)))
 
 print(list(zipped))
 
