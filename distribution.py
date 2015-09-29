@@ -5,6 +5,7 @@ Credit:
 http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in-python
 https://docs.python.org/2/tutorial/datastructures.html
 http://www.tutorialspoint.com/python/python_tuples.htm
+http://stackoverflow.com/questions/4806911/string-comparison-technique-used-by-python
 
 Assignment:
 
@@ -54,14 +55,18 @@ for letter in alphabet:
     mylist.append(lowercase.count(letter))
 
 
-zipped=list((zip(mylist,alphabet)))
+zipped=list((zip(alphabet,mylist)))
 
 zipped.sort(reverse=True)
 print(zipped)
 
+for x in zipped:
+    for i in range (1,x[0]):
+        if ord(x[i])>ord(x[i-1]):
+            x[i],x[i-1]=x[i-1],x[i]
 
 for x in zipped:
     #need to alphabetize within one frequency
     #for i in range()
-    if x[0]!=0:
+    if x[1]!=0:
         print(x[1]*x[0])
