@@ -46,20 +46,22 @@ mylist=[]
 #for letter in alphabet:
     #list.append(zip(0,[letter]))
 alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+alphabet.reverse()
 for letter in alphabet:
     mylist.append(lowercase.count(letter))
 
 
-
 zipped=list((zip(mylist,alphabet)))
 
-#print(list(zipped))
 
 zipped.sort(reverse=True)
 print(zipped)
 
+
 for x in zipped:
-    print(x[1]*x[0])
+    if x[0]!=0:
+        print(x[1]*x[0])
+
 
 #print(sorted(dictionary))
 
