@@ -4,6 +4,7 @@ Author: Adam Pikielny
 Credit:
 http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in-python
 https://docs.python.org/2/tutorial/datastructures.html
+http://www.tutorialspoint.com/python/python_tuples.htm
 
 Assignment:
 
@@ -38,13 +39,15 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+
+#input
 string=input("Please enter a string of text (the bigger the better): ")
 print("\n")
 lowercase=string.lower()
-#dictionary={}
+
+#setting up alphabet list
 mylist=[]
-#for letter in alphabet:
-    #list.append(zip(0,[letter]))
+
 alphabet=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 alphabet.reverse()
 for letter in alphabet:
@@ -53,24 +56,12 @@ for letter in alphabet:
 
 zipped=list((zip(mylist,alphabet)))
 
-
 zipped.sort(reverse=True)
 print(zipped)
 
 
 for x in zipped:
+    #need to alphabetize within one frequency
+    #for i in range()
     if x[0]!=0:
         print(x[1]*x[0])
-
-
-#print(sorted(dictionary))
-
-#from operator import itemgetter
-#sortednary=sorted(dictionary.items(), key=itemgetter(1))
-#print(sortednary)
-
-#print (dictionary)
-#print("The distribution of characters in '" + string + "'")
-#for letter in alphabet:
-    #if dictionary[letter]!=0:
-        #print(letter*dictionary[letter])
