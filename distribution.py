@@ -57,8 +57,8 @@ for letter in alphabet:
 
 zipped=list((zip(alphabet,mylist)))
 
-#zipped.sort(reverse=True, key=operator.itemgetter(1, 2))
-newlist=sorted(zipped, reverse=True, key=lambda element: (element[1], element[0]))
+zipped.sort(reverse=True)
+#newlist=sorted(zipped, reverse=True, key=lambda element: (element[1], element[0]))
 print(zipped)
 
 
