@@ -58,7 +58,8 @@ zipped=list((zip(mylist,alphabet)))
 zipped.sort(reverse=True)
 print(zipped)
 
-
+for x in zipped:
+    print(x[1]*x[0])
 
 #print(sorted(dictionary))
 
