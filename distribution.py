@@ -58,10 +58,13 @@ zipped=list((zip(mylist,alphabet)))
 
 zipped.sort(reverse=True)
 print(zipped)
-
-
+secondlist=[]
 for x in zipped:
+    
+
+
+#for x in zipped:
     #need to alphabetize within one frequency
     #for i in range()
-    if x[0]!=0:
-        print(x[1]*x[0])
+    #if x[0]!=0:
+        #print(x[1]*x[0])
