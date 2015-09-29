@@ -5,7 +5,7 @@ Credit:
 http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in-python
 https://docs.python.org/2/tutorial/datastructures.html
 http://www.tutorialspoint.com/python/python_tuples.htm
-http://stackoverflow.com/questions/4806911/string-comparison-technique-used-by-python
+http://stackoverflow.com/questions/9376384/sort-a-list-of-tuples-depending-on-two-elements
 
 Assignment:
 
@@ -57,15 +57,12 @@ for letter in alphabet:
 
 zipped=list((zip(alphabet,mylist)))
 
-zipped.sort(reverse=True)
+#zipped.sort(reverse=True, key=operator.itemgetter(1, 2))
+newlist=sorted(zipped, reverse=True, key=lambda element: (element[1], element[0]))
 print(zipped)
 
-for x in zipped:
-    for i in range (1,x[0]):
-        if ord(x[i])>ord(x[i-1]):
-            x[i],x[i-1]=x[i-1],x[i]
 
-for x in zipped:
+for x in newlist:
     #need to alphabetize within one frequency
     #for i in range()
     if x[1]!=0:
