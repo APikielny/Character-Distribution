@@ -6,6 +6,7 @@ http://stackoverflow.com/questions/6797984/how-to-convert-string-to-lowercase-in
 https://docs.python.org/2/tutorial/datastructures.html
 http://www.tutorialspoint.com/python/python_tuples.htm
 http://stackoverflow.com/questions/9376384/sort-a-list-of-tuples-depending-on-two-elements
+http://stackoverflow.com/questions/4233476/sort-a-list-by-multiple-attributes
 
 Assignment:
 
@@ -43,7 +44,8 @@ Notice about this example:
 
 #input
 string=input("Please enter a string of text (the bigger the better): ")
-print("\n")
+print('The distribution of characters in "' + string + '" is:')
+
 lowercase=string.lower()
 
 #setting up alphabet list
@@ -54,16 +56,10 @@ alphabet.reverse()
 for letter in alphabet:
     mylist.append(lowercase.count(letter))
 
-
 zipped=list((zip(alphabet,mylist)))
 
-zipped.sort(reverse=True)
-#newlist=sorted(zipped, reverse=True, key=lambda element: (element[1], element[0]))
-print(zipped)
+zipped.sort(key=lambda x: (-x[1], x[0]))
 
-
-for x in newlist:
-    #need to alphabetize within one frequency
-    #for i in range()
+for x in zipped:
     if x[1]!=0:
         print(x[1]*x[0])
